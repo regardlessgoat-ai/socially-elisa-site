@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #e1ded9;
+  --color-chartreuse: #cad183;
+  --color-wine: #66033c;
+  --color-espresso: #311507;
+}
+
+html, body {
+  background: var(--color-cream);
+  color: var(--color-espresso);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-wine);
+  color: var(--color-chartreuse);
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition;
+  }
+  .btn-wine {
+    @apply btn bg-wine text-cream hover:bg-espresso;
+  }
+  .btn-chartreuse {
+    @apply btn bg-chartreuse text-wine hover:bg-cream;
+  }
+  .btn-outline {
+    @apply btn border border-current text-current hover:bg-current hover:text-cream;
+  }
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.25em];
+  }
+  .display {
+    @apply font-display leading-[0.85] tracking-tight;
+  }
+}
+
+/* hide scrollbars on the marquee */
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.spin-slow {
+  animation: spin 18s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
