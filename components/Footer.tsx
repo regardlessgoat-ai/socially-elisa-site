@@ -6,11 +6,13 @@ export default function Footer() {
       <div className="container-page py-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Link href="/" className="display text-5xl text-chartreuse">
-              socially<span className="text-cream">.</span>elisa
+            <Link href="/" aria-label="Socially Elisa — home" className="display leading-[0.82] text-5xl text-chartreuse md:text-6xl">
+              socially
+              <br />
+              elisa
             </Link>
             <p className="mt-6 max-w-sm text-sm text-cream/70">
-              Marketing · Branding · Social Media. A flower in a world of weeds.
+              Marketing · Branding · Social Media. Imposing yet delicate.
             </p>
           </div>
           <FooterCol

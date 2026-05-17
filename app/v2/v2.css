@@ -1,0 +1,227 @@
+/* ====================================================================
+   SOCIALLY ELISA — TYPE II
+   A standalone palette + utility layer scoped to .v2-root so the V1
+   site is untouched.
+==================================================================== */
+
+.v2-root {
+  --se-cream: #e1ded9;
+  --se-bone: #efeae0;
+  --se-chartreuse: #cad183;
+  --se-wine: #66033c;
+  --se-magenta: #a4124f;
+  --se-espresso: #311507;
+  --se-ink: #1a0a04;
+
+  --groove: var(--font-groove), "Bagel Fat One", system-ui;
+  --heavy: var(--font-heavy), "Anton", "Bebas Neue", impact, sans-serif;
+  --body: var(--font-body), ui-sans-serif, system-ui;
+
+  background: var(--se-wine);
+  color: var(--se-cream);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.v2-root ::selection {
+  background: var(--se-chartreuse);
+  color: var(--se-wine);
+}
+
+.v2-root body,
+.v2-root main {
+  background: var(--se-wine);
+}
+
+/* ---------- Typography ---------- */
+.v2-h1,
+.v2-h2,
+.v2-h3,
+.v2-display {
+  font-family: var(--heavy);
+  letter-spacing: -0.01em;
+  line-height: 0.86;
+  text-transform: lowercase;
+}
+
+.v2-groove {
+  font-family: var(--groove);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  text-transform: lowercase;
+}
+
+.v2-eyebrow {
+  font-family: var(--body);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ---------- Layout helpers ---------- */
+.v2-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1480px;
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+  .v2-container { padding: 0 3rem; }
+}
+
+.v2-divider {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.18;
+}
+
+/* ---------- Buttons ---------- */
+.v2-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: transform 240ms cubic-bezier(.2,.8,.2,1), background 240ms, color 240ms;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  will-change: transform;
+}
+.v2-btn:hover { transform: translateY(-2px); }
+.v2-btn-solid {
+  background: var(--se-chartreuse);
+  color: var(--se-wine);
+  border-color: var(--se-chartreuse);
+}
+.v2-btn-solid:hover { background: var(--se-cream); border-color: var(--se-cream); }
+.v2-btn-ghost { color: var(--se-chartreuse); border-color: var(--se-chartreuse); }
+.v2-btn-ghost:hover { background: var(--se-chartreuse); color: var(--se-wine); }
+.v2-btn-ink { background: var(--se-wine); color: var(--se-chartreuse); border-color: var(--se-wine); }
+.v2-btn-ink:hover { background: var(--se-espresso); border-color: var(--se-espresso); }
+
+/* ---------- Marquee ---------- */
+.v2-marquee {
+  display: flex;
+  overflow: hidden;
+  border-top: 1px solid rgba(202, 209, 131, 0.25);
+  border-bottom: 1px solid rgba(202, 209, 131, 0.25);
+  background: var(--se-wine);
+  padding: 1.1rem 0;
+}
+.v2-marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  animation: v2-marquee 32s linear infinite;
+}
+.v2-marquee-track > * { padding: 0 2.5rem; }
+@keyframes v2-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+.v2-marquee-fast .v2-marquee-track { animation-duration: 18s; }
+.v2-marquee-reverse .v2-marquee-track { animation-direction: reverse; }
+
+/* ---------- Grain texture ---------- */
+.v2-grain {
+  position: relative;
+  isolation: isolate;
+}
+.v2-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  z-index: 0;
+}
+
+/* ---------- Marquee spinner of words via SVG circle ---------- */
+.v2-stamp {
+  animation: v2-spin 22s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes v2-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Cursor follower ---------- */
+.v2-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(202,209,131,0.35), rgba(202,209,131,0) 60%);
+  pointer-events: none;
+  z-index: 9;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  filter: blur(28px);
+  transition: opacity 200ms;
+}
+
+/* ---------- Reveal animation utility (controlled by JS) ---------- */
+.v2-reveal { opacity: 0; transform: translateY(28px); transition: opacity 700ms cubic-bezier(.2,.8,.2,1), transform 700ms cubic-bezier(.2,.8,.2,1); }
+.v2-reveal.is-in { opacity: 1; transform: translateY(0); }
+
+/* ---------- Scroll wobble for grooveline logos ---------- */
+@keyframes v2-wobble {
+  0%, 100% { transform: rotate(-1.2deg); }
+  50%      { transform: rotate(1.2deg); }
+}
+.v2-wobble { animation: v2-wobble 5s ease-in-out infinite; transform-origin: 50% 50%; }
+
+/* ---------- Photo treatment: duotone via filter ---------- */
+.v2-duotone {
+  filter: grayscale(1) contrast(1.15) brightness(0.92) sepia(0.25) hue-rotate(280deg) saturate(2);
+}
+
+/* ---------- Project card hover ---------- */
+.v2-project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  transition: transform 360ms cubic-bezier(.2,.8,.2,1);
+}
+.v2-project:hover { transform: translateY(-4px); }
+.v2-project::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 80% at 50% 100%, rgba(0,0,0,0.45), transparent 60%);
+  opacity: 0;
+  transition: opacity 360ms;
+  z-index: 2;
+}
+.v2-project:hover::before { opacity: 1; }
+
+/* ---------- Animated underline link ---------- */
+.v2-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+.v2-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(.7,.05,.2,1);
+}
+.v2-link:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* ---------- Section bg variants ---------- */
+.v2-on-cream { background: var(--se-bone); color: var(--se-wine); }
+.v2-on-wine { background: var(--se-wine); color: var(--se-chartreuse); }
+.v2-on-chartreuse { background: var(--se-chartreuse); color: var(--se-wine); }
+.v2-on-ink { background: var(--se-espresso); color: var(--se-chartreuse); }
+.v2-on-magenta { background: var(--se-magenta); color: var(--se-chartreuse); }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bagel_Fat_One, DM_Sans } from "next/font/google";
+import CursorGlow from "@/components/CursorGlow";
 import "./globals.css";
 
 const display = Bagel_Fat_One({
@@ -28,7 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <CursorGlow />
+        {children}
+      </body>
     </html>
   );
 }

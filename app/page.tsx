@@ -22,15 +22,6 @@ const services = [
   },
 ];
 
-const work = [
-  { name: "Nami", tag: "Branding", color: "bg-wine text-chartreuse" },
-  { name: "Le Date", tag: "Social", color: "bg-chartreuse text-wine" },
-  { name: "Organifi", tag: "Campaign", color: "bg-espresso text-chartreuse" },
-  { name: "Solara", tag: "Identity", color: "bg-wine text-cream" },
-  { name: "Bred", tag: "Launch", color: "bg-chartreuse text-espresso" },
-  { name: "Volt", tag: "Social", color: "bg-espresso text-cream" },
-];
-
 export default function Home() {
   return (
     <>
@@ -39,37 +30,33 @@ export default function Home() {
         {/* HERO */}
         <section className="relative overflow-hidden bg-wine text-cream">
           <div className="container-page relative pb-24 pt-40 md:pb-32 md:pt-48">
-            <Flower className="absolute -right-12 top-24 hidden h-72 w-72 spin-slow md:block" />
-            <Flower
-              className="absolute -left-16 bottom-16 hidden h-56 w-56 spin-slow md:block"
-              petal="#66033C"
-              center="#CAD183"
-              stroke="#CAD183"
-            />
-            <p className="eyebrow text-chartreuse">
-              Marketing · Branding · Social Media
-            </p>
-            <h1 className="display mt-6 text-[15vw] leading-[0.8] text-chartreuse md:text-[10rem]">
-              socially
-              <br />
-              <span className="text-cream">elisa</span>
-            </h1>
-            <div className="mt-12 grid items-end gap-8 md:grid-cols-2">
-              <p className="max-w-xl text-lg text-cream/85">
-                A social-first studio that goes beyond the obvious. We build
-                brands that feel like a flower — imposing, delicate, and
-                impossible to scroll past.
+            <Flower className="pointer-events-none absolute right-4 top-4 hidden h-40 w-40 opacity-95 md:right-8 md:top-6 md:block md:h-48 md:w-48 lg:right-12 lg:top-8 lg:h-56 lg:w-56" />
+            <div className="md:pl-6 lg:pl-12">
+              <p className="eyebrow text-chartreuse">
+                Marketing · Branding · Social Media
               </p>
-              <div className="flex flex-wrap gap-4 md:justify-end">
-                <Link href="/services#pricing" className="btn-chartreuse">
-                  See plans →
-                </Link>
-                <Link
-                  href="/book"
-                  className="btn border border-chartreuse text-chartreuse hover:bg-chartreuse hover:text-wine"
-                >
-                  Book a call
-                </Link>
+              <h1 className="display mt-6 text-[13vw] leading-[0.82] text-chartreuse md:text-[8.5rem] lg:text-[10rem]">
+                socially
+                <br />
+                elisa
+              </h1>
+              <div className="mt-12 grid items-end gap-8 md:grid-cols-2">
+                <p className="max-w-xl text-lg text-cream/85">
+                  A social-first studio that goes beyond the obvious. We build
+                  brands that feel like a flower — imposing, delicate, and
+                  impossible to scroll past.
+                </p>
+                <div className="flex flex-wrap gap-4 md:justify-end">
+                  <Link href="/services#pricing" className="btn-chartreuse">
+                    See plans →
+                  </Link>
+                  <Link
+                    href="/book"
+                    className="btn border border-chartreuse text-chartreuse hover:bg-chartreuse hover:text-wine"
+                  >
+                    Book a call
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -99,10 +86,6 @@ export default function Home() {
                   Done with taste.
                 </h2>
               </div>
-              <p className="max-w-md text-espresso/70">
-                Pick a subscription, stop juggling freelancers, and let us run
-                the parts of your brand that move the needle.
-              </p>
             </div>
             <div className="mt-16 grid gap-6 md:grid-cols-3">
               {services.map((s, i) => (
@@ -142,47 +125,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WORK */}
-        <section className="bg-espresso py-28 text-cream">
-          <div className="container-page">
-            <div className="flex flex-wrap items-end justify-between gap-6">
-              <div>
-                <p className="eyebrow text-chartreuse">Selected work</p>
-                <h2 className="display mt-4 text-6xl text-cream md:text-7xl">
-                  Clients we love.
-                </h2>
-              </div>
-              <Link href="/work" className="btn-chartreuse">
-                See all →
-              </Link>
-            </div>
-            <div className="mt-16 grid gap-4 md:grid-cols-3">
-              {work.map((w) => (
-                <div
-                  key={w.name}
-                  className={`group relative aspect-[4/5] overflow-hidden rounded-2xl ${w.color}`}
-                >
-                  <div className="absolute left-6 top-6">
-                    <p className="eyebrow">{w.tag}</p>
-                  </div>
-                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                    <h3 className="display text-5xl">{w.name}</h3>
-                    <span className="text-xs">→</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ABOUT PREVIEW */}
         <section className="bg-chartreuse py-28 text-wine">
           <div className="container-page grid items-center gap-16 md:grid-cols-2">
             <div>
               <p className="eyebrow">About</p>
               <h2 className="display mt-4 text-6xl md:text-7xl">
-                A flower in
-                <br /> a world of weeds.
+                Meet Elisa.
               </h2>
               <p className="mt-6 max-w-md text-espresso/80">
                 Socially Elisa is a marketing agency built by a creative who
@@ -201,8 +150,8 @@ export default function Home() {
                   Independent
                 </span>
               </div>
-              <Link href="/about" className="btn-wine mt-10">
-                Meet Elisa →
+              <Link href="/book" className="btn-wine mt-10">
+                Book a call with Elisa →
               </Link>
             </div>
             <div className="relative aspect-square w-full max-w-lg justify-self-end">
@@ -213,23 +162,6 @@ export default function Home() {
                 center="#CAD183"
                 stroke="#311507"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* TESTIMONIAL */}
-        <section className="bg-cream py-28">
-          <div className="container-page">
-            <div className="mx-auto max-w-3xl text-center">
-              <Flower className="mx-auto h-16 w-16" />
-              <p className="display mt-8 text-3xl text-wine md:text-4xl">
-                “Working with Elisa was the first time a marketing agency
-                actually felt like part of our team. The content looks
-                incredible — and the numbers backed it up.”
-              </p>
-              <p className="mt-8 eyebrow text-espresso">
-                — A future happy client
-              </p>
             </div>
           </div>
         </section>

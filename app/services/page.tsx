@@ -60,7 +60,7 @@ export default function ServicesPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden bg-wine pb-20 pt-40 text-cream">
-          <Flower className="absolute -right-10 -top-10 h-72 w-72 spin-slow opacity-60" />
+          <Flower className="absolute -right-10 -top-10 h-72 w-72 opacity-60" />
           <div className="container-page">
             <p className="eyebrow text-chartreuse">Services & Pricing</p>
             <h1 className="display mt-6 text-7xl text-chartreuse md:text-9xl">

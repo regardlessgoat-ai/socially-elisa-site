@@ -2,12 +2,18 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <div className="container-page flex items-center justify-between py-6">
-        <Link href="/" className="display text-3xl text-wine">
-          socially<span className="text-chartreuse">.</span>elisa
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-chartreuse/15 bg-wine/85 backdrop-blur-md">
+      <div className="container-page flex items-center justify-between py-4 md:py-5">
+        <Link
+          href="/"
+          aria-label="Socially Elisa — home"
+          className="display leading-[0.78] text-chartreuse text-xl md:text-2xl"
+        >
+          socially
+          <br />
+          elisa
         </Link>
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {[
             ["Work", "/work"],
             ["Services", "/services"],
@@ -17,15 +23,12 @@ export default function Nav() {
             <Link
               key={href}
               href={href}
-              className="text-sm tracking-wide text-espresso hover:text-wine"
+              className="text-base font-medium tracking-wide text-chartreuse transition hover:text-cream"
             >
               {label}
             </Link>
           ))}
         </nav>
-        <Link href="/book" className="btn-wine text-xs">
-          Book a call →
-        </Link>
       </div>
     </header>
   );

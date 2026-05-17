@@ -43,7 +43,7 @@ export default function BookPage() {
               </ul>
             </div>
             <div className="relative aspect-square">
-              <Flower className="absolute inset-0 spin-slow" />
+              <Flower className="absolute inset-0" />
             </div>
           </div>
         </section>

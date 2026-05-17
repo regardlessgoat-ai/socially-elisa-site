@@ -10,7 +10,7 @@ export default function AboutPage() {
       <main>
         <section className="relative overflow-hidden bg-chartreuse pb-24 pt-40 text-wine">
           <Flower
-            className="absolute -right-12 top-20 hidden h-72 w-72 spin-slow md:block"
+            className="absolute -right-12 top-20 hidden h-72 w-72 md:block"
             petal="#66033C"
             center="#CAD183"
             stroke="#66033C"
@@ -48,21 +48,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="bg-wine py-24 text-cream">
-          <div className="container-page grid gap-12 md:grid-cols-3">
-            {[
-              ["50+", "brands launched"],
-              ["3M+", "impressions / mo"],
-              ["98%", "client retention"],
-            ].map(([stat, label]) => (
-              <div key={label} className="border-t border-cream/20 pt-6">
-                <p className="display text-7xl text-chartreuse">{stat}</p>
-                <p className="mt-2 eyebrow">{label}</p>
-              </div>
-            ))}
           </div>
         </section>
 
