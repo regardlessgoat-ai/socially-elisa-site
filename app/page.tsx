@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Flower from "@/components/Flower";
@@ -44,11 +45,15 @@ export default function Home() {
               stroke="#CAD183"
             />
             <div className="relative z-10 md:pl-48 lg:pl-72 xl:pl-96">
-              <h1 className="display text-[12vw] leading-[0.82] text-chartreuse md:text-[6rem] lg:text-[8rem] xl:text-[8.5rem]">
-                socially
-                <br />
-                elisa
-              </h1>
+              <h1 className="sr-only">Socially Elisa</h1>
+              <Image
+                src="/logo.png"
+                alt="Socially Elisa"
+                width={434}
+                height={301}
+                priority
+                className="h-auto w-[70vw] max-w-[480px] md:w-[26rem] lg:w-[34rem] xl:w-[40rem]"
+              />
               <div className="mt-12 grid items-end gap-8 md:grid-cols-2">
                 <p className="max-w-xl text-lg text-cream/85">
                   A social-first studio that goes beyond the obvious. We build
@@ -129,8 +134,24 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="bg-wine py-32 text-cream">
-          <div className="container-page text-center">
+        <section className="relative overflow-hidden bg-wine py-32 text-cream">
+          <Image
+            src="/mascot.png"
+            alt=""
+            aria-hidden
+            width={1000}
+            height={1498}
+            className="pointer-events-none absolute left-4 bottom-0 z-0 hidden h-auto w-32 select-none md:left-12 md:block md:w-40 lg:left-20 lg:w-48"
+          />
+          <Image
+            src="/mascot.png"
+            alt=""
+            aria-hidden
+            width={1000}
+            height={1498}
+            className="pointer-events-none absolute right-4 bottom-0 z-0 hidden h-auto w-32 -scale-x-100 select-none md:right-12 md:block md:w-40 lg:right-20 lg:w-48"
+          />
+          <div className="container-page relative z-10 text-center">
             <p className="eyebrow text-chartreuse">Ready when you are</p>
             <h2 className="display mt-6 text-6xl text-cream md:text-8xl">
               Let&apos;s build
