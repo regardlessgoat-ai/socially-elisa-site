@@ -141,7 +141,7 @@ export default function Home() {
             aria-hidden
             width={1000}
             height={1498}
-            className="pointer-events-none absolute left-4 bottom-0 z-0 hidden h-auto w-32 select-none md:left-12 md:block md:w-40 lg:left-20 lg:w-48"
+            className="pointer-events-none absolute left-4 bottom-0 z-0 hidden h-auto w-24 select-none md:left-12 md:block md:w-32 lg:left-20 lg:w-40"
           />
           <Image
             src="/mascot.png"
@@ -149,7 +149,7 @@ export default function Home() {
             aria-hidden
             width={1000}
             height={1498}
-            className="pointer-events-none absolute right-4 bottom-0 z-0 hidden h-auto w-32 -scale-x-100 select-none md:right-12 md:block md:w-40 lg:right-20 lg:w-48"
+            className="pointer-events-none absolute right-4 bottom-0 z-0 hidden h-auto w-24 -scale-x-100 select-none md:right-12 md:block md:w-32 lg:right-20 lg:w-40"
           />
           <div className="container-page relative z-10 text-center">
             <p className="eyebrow text-chartreuse">Ready when you are</p>
