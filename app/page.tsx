@@ -43,7 +43,7 @@ export default function Home() {
               center="#CAD183"
               stroke="#CAD183"
             />
-            <div className="relative z-10 md:pl-24 lg:pl-36 xl:pl-52">
+            <div className="relative z-10 md:pl-32 lg:pl-44 xl:pl-64">
               <p className="eyebrow text-chartreuse">
                 Marketing · Branding · Social Media
               </p>
