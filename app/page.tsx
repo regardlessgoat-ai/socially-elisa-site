@@ -34,7 +34,7 @@ export default function Home() {
                 never block clicks or sit on top of text. */}
             <Flower
               aria-hidden
-              className="pointer-events-none absolute right-4 top-20 z-0 hidden h-32 w-32 opacity-95 md:right-8 md:top-24 md:block md:h-40 md:w-40 lg:right-12 lg:top-28 lg:h-48 lg:w-48"
+              className="pointer-events-none absolute right-4 top-20 z-0 hidden h-28 w-28 opacity-95 md:right-8 md:top-24 md:block md:h-32 md:w-32 lg:right-12 lg:top-28 lg:h-36 lg:w-36"
             />
             <Flower
               aria-hidden
@@ -43,11 +43,11 @@ export default function Home() {
               center="#CAD183"
               stroke="#CAD183"
             />
-            <div className="relative z-10 md:pl-32 lg:pl-44 xl:pl-64">
+            <div className="relative z-10 md:pl-48 lg:pl-72 xl:pl-96">
               <p className="eyebrow text-chartreuse">
                 Marketing · Branding · Social Media
               </p>
-              <h1 className="display mt-6 text-[13vw] leading-[0.82] text-chartreuse md:text-[8.5rem] lg:text-[10rem]">
+              <h1 className="display mt-6 text-[12vw] leading-[0.82] text-chartreuse md:text-[6rem] lg:text-[8rem] xl:text-[8.5rem]">
                 socially
                 <br />
                 elisa
