@@ -30,8 +30,20 @@ export default function Home() {
         {/* HERO */}
         <section className="relative overflow-hidden bg-wine text-cream">
           <div className="container-page relative pb-24 pt-40 md:pb-32 md:pt-48">
-            <Flower className="pointer-events-none absolute right-4 top-4 hidden h-40 w-40 opacity-95 md:right-8 md:top-6 md:block md:h-48 md:w-48 lg:right-12 lg:top-8 lg:h-56 lg:w-56" />
-            <div className="md:pl-6 lg:pl-12">
+            {/* Decorative flowers — pointer-events-none + z-0 so they
+                never block clicks or sit on top of text. */}
+            <Flower
+              aria-hidden
+              className="pointer-events-none absolute right-4 top-20 z-0 hidden h-32 w-32 opacity-95 md:right-8 md:top-24 md:block md:h-40 md:w-40 lg:right-12 lg:top-28 lg:h-48 lg:w-48"
+            />
+            <Flower
+              aria-hidden
+              className="pointer-events-none absolute bottom-4 left-4 z-0 hidden h-28 w-28 opacity-95 md:bottom-6 md:left-8 md:block md:h-36 md:w-36 lg:bottom-8 lg:left-12 lg:h-44 lg:w-44"
+              petal="#66033C"
+              center="#CAD183"
+              stroke="#CAD183"
+            />
+            <div className="relative z-10 md:pl-24 lg:pl-36 xl:pl-52">
               <p className="eyebrow text-chartreuse">
                 Marketing · Branding · Social Media
               </p>
