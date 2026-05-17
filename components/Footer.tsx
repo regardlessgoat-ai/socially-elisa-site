@@ -4,9 +4,13 @@ export default function Footer() {
   return (
     <footer className="bg-wine text-cream">
       <div className="container-page py-20">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Link href="/" aria-label="Socially Elisa — home" className="display leading-[0.82] text-5xl text-chartreuse md:text-6xl">
+            <Link
+              href="/"
+              aria-label="Socially Elisa — home"
+              className="display leading-[0.82] text-5xl text-chartreuse md:text-6xl"
+            >
               socially
               <br />
               elisa
@@ -16,20 +20,8 @@ export default function Footer() {
             </p>
           </div>
           <FooterCol
-            title="Explore"
-            links={[
-              ["Work", "/work"],
-              ["Services", "/services"],
-              ["About", "/about"],
-            ]}
-          />
-          <FooterCol
             title="Get in"
-            links={[
-              ["Book a call", "/book"],
-              ["Contact", "/contact"],
-              ["Subscribe", "/services#pricing"],
-            ]}
+            links={[["Book a call", "/book"]]}
           />
           <FooterCol
             title="Follow"

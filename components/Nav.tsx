@@ -13,22 +13,12 @@ export default function Nav() {
           <br />
           elisa
         </Link>
-        <nav className="hidden items-center gap-10 md:flex">
-          {[
-            ["Work", "/work"],
-            ["Services", "/services"],
-            ["About", "/about"],
-            ["Contact", "/contact"],
-          ].map(([label, href]) => (
-            <Link
-              key={href}
-              href={href}
-              className="text-base font-medium tracking-wide text-chartreuse transition hover:text-cream"
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
+        <Link
+          href="/book"
+          className="text-base font-medium tracking-wide text-chartreuse transition hover:text-cream"
+        >
+          Book a call →
+        </Link>
       </div>
     </header>
   );

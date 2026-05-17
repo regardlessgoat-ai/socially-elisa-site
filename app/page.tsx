@@ -16,9 +16,9 @@ const services = [
     items: ["Visual identity", "Brand voice", "Guidelines & assets"],
   },
   {
-    title: "Marketing",
-    desc: "Paid social, partnerships, launches. Strategy first, taste forever.",
-    items: ["Paid social", "Campaign launches", "Influencer + UGC"],
+    title: "Websites",
+    desc: "Sites that look as intentional as your brand. Designed, built, and handed off — no plugin soup, no compromises.",
+    items: ["Custom design", "Webflow / Shopify", "Launch & handoff"],
   },
 ];
 
@@ -44,10 +44,7 @@ export default function Home() {
               stroke="#CAD183"
             />
             <div className="relative z-10 md:pl-48 lg:pl-72 xl:pl-96">
-              <p className="eyebrow text-chartreuse">
-                Marketing · Branding · Social Media
-              </p>
-              <h1 className="display mt-6 text-[12vw] leading-[0.82] text-chartreuse md:text-[6rem] lg:text-[8rem] xl:text-[8.5rem]">
+              <h1 className="display text-[12vw] leading-[0.82] text-chartreuse md:text-[6rem] lg:text-[8rem] xl:text-[8.5rem]">
                 socially
                 <br />
                 elisa
@@ -59,14 +56,8 @@ export default function Home() {
                   impossible to scroll past.
                 </p>
                 <div className="flex flex-wrap gap-4 md:justify-end">
-                  <Link href="/services#pricing" className="btn-chartreuse">
-                    See plans →
-                  </Link>
-                  <Link
-                    href="/book"
-                    className="btn border border-chartreuse text-chartreuse hover:bg-chartreuse hover:text-wine"
-                  >
-                    Book a call
+                  <Link href="/book" className="btn-chartreuse">
+                    Book a call →
                   </Link>
                 </div>
               </div>
@@ -137,47 +128,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ABOUT PREVIEW */}
-        <section className="bg-chartreuse py-28 text-wine">
-          <div className="container-page grid items-center gap-16 md:grid-cols-2">
-            <div>
-              <p className="eyebrow">About</p>
-              <h2 className="display mt-4 text-6xl md:text-7xl">
-                Meet Elisa.
-              </h2>
-              <p className="mt-6 max-w-md text-espresso/80">
-                Socially Elisa is a marketing agency built by a creative who
-                got tired of brands that sound the same. We mix sharp
-                strategy with a softer, more human way of showing up — for
-                companies, and for the women building them.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <span className="rounded-full border border-wine px-4 py-1 text-xs uppercase tracking-[0.25em]">
-                  Creative
-                </span>
-                <span className="rounded-full border border-wine px-4 py-1 text-xs uppercase tracking-[0.25em]">
-                  Authentic
-                </span>
-                <span className="rounded-full border border-wine px-4 py-1 text-xs uppercase tracking-[0.25em]">
-                  Independent
-                </span>
-              </div>
-              <Link href="/book" className="btn-wine mt-10">
-                Book a call with Elisa →
-              </Link>
-            </div>
-            <div className="relative aspect-square w-full max-w-lg justify-self-end">
-              <Flower className="absolute inset-0" />
-              <Flower
-                className="absolute right-10 top-10 h-32 w-32"
-                petal="#311507"
-                center="#CAD183"
-                stroke="#311507"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="bg-wine py-32 text-cream">
           <div className="container-page text-center">
@@ -188,14 +138,8 @@ export default function Home() {
               <span className="text-chartreuse">something pretty.</span>
             </h2>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <Link href="/services#pricing" className="btn-chartreuse">
-                View subscription plans
-              </Link>
-              <Link
-                href="/book"
-                className="btn border border-chartreuse text-chartreuse hover:bg-chartreuse hover:text-wine"
-              >
-                Book a call
+              <Link href="/book" className="btn-chartreuse">
+                Book a call →
               </Link>
             </div>
           </div>
