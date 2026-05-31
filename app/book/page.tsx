@@ -66,10 +66,6 @@ export default function BookPage() {
                 className="h-[720px] w-full"
               />
             </div>
-            <p className="mt-4 text-xs text-cream/60">
-              Set <code className="text-chartreuse">NEXT_PUBLIC_CALENDLY_URL</code> in{" "}
-              <code className="text-chartreuse">.env.local</code> to use your real Calendly link.
-            </p>
           </div>
         </section>
       </main>
