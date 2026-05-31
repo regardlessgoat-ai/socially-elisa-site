@@ -51,7 +51,7 @@ export default function Home() {
                 alt="Socially Elisa"
                 className="mx-auto block h-auto w-[82vw] max-w-[560px] md:w-[30rem] lg:w-[40rem] xl:w-[46rem]"
               />
-              <div className="mt-12 grid items-end gap-8 md:grid-cols-[1fr_auto] md:pl-24 lg:pl-36 xl:pl-48">
+              <div className="mt-12 flex flex-col items-center gap-8 text-center">
                 <p className="max-w-2xl text-lg text-cream/85">
                   Socially Elisa is an agency that goes beyond the obvious, like
                   a flower, imposing yet delicate. Its focus is not only on
@@ -62,7 +62,7 @@ export default function Home() {
                   appealing design that evokes genuine interest, almost like a
                   hug.
                 </p>
-                <div className="flex flex-wrap gap-4 md:justify-end">
+                <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/book" className="btn-chartreuse">
                     Book a call →
                   </Link>
