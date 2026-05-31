@@ -8,11 +8,16 @@ type RevealProps = {
 };
 
 /**
- * Wraps a block and reveals its direct children once, the first time the
- * block scrolls into view. We only add the `reveal-ready` class on the
- * client so that without JS (or before hydration) the content renders in
- * its final, visible state. The actual animation lives in globals.css and
- * is gated behind `prefers-reduced-motion: no-preference`.
+ * Wraps a block and reveals its direct children whenever the block scrolls
+ * into view. We only add the `reveal-ready` class on the client so that
+ * without JS (or before hydration) the content renders in its final,
+ * visible state. The actual animation lives in globals.css and is gated
+ * behind `prefers-reduced-motion: no-preference`.
+ *
+ * The animation re-triggers every time the block re-enters the viewport:
+ * `is-visible` is added once ~20% is on screen and removed only after the
+ * block has fully left, so it replays on the next scroll-in without
+ * flickering while partially visible.
  */
 export default function Reveal({ className = "", children }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,14 +38,15 @@ export default function Reveal({ className = "", children }: RevealProps) {
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
             el.classList.add("is-visible");
-            io.disconnect(); // one-time reveal — never re-trigger
-            break;
+          } else if (!entry.isIntersecting) {
+            // Fully out of view — reset so the next scroll-in replays it.
+            el.classList.remove("is-visible");
           }
         }
       },
-      { threshold: 0.15 },
+      { threshold: [0, 0.2] },
     );
 
     io.observe(el);
