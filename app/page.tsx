@@ -52,9 +52,14 @@ export default function Home() {
               />
               <div className="mt-12 grid items-end gap-8 md:grid-cols-2 md:pl-48 lg:pl-72 xl:pl-96">
                 <p className="max-w-xl text-lg text-cream/85">
-                  A social-first studio that goes beyond the obvious. We build
-                  brands that feel like a flower — imposing, delicate, and
-                  impossible to scroll past.
+                  Socially Elisa is an agency that goes beyond the obvious, like
+                  a flower, imposing yet delicate. Its focus is not only on
+                  helping companies achieve excellence in social media, but also
+                  on bringing a human side with social events for female
+                  interaction and networking. The entire creative process was
+                  designed to combine a fun, modern aesthetic with a visually
+                  appealing design that evokes genuine interest, almost like a
+                  hug.
                 </p>
                 <div className="flex flex-wrap gap-4 md:justify-end">
                   <Link href="/book" className="btn-chartreuse">

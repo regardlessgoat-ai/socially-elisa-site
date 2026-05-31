@@ -26,9 +26,8 @@ export default function Footer() {
           <FooterCol
             title="Follow"
             links={[
-              ["Instagram", "https://instagram.com"],
-              ["TikTok", "https://tiktok.com"],
-              ["LinkedIn", "https://linkedin.com"],
+              ["Instagram", "https://www.instagram.com/sociallyelisa/"],
+              ["LinkedIn", "https://www.linkedin.com/in/elisatoneto/"],
             ]}
           />
         </div>
