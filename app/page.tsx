@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Flower from "@/components/Flower";
@@ -44,17 +43,14 @@ export default function Home() {
               center="#CAD183"
               stroke="#CAD183"
             />
-            <div className="relative z-10 md:pl-48 lg:pl-72 xl:pl-96">
+            <div className="relative z-10">
               <h1 className="sr-only">Socially Elisa</h1>
-              <Image
-                src="/logo.png"
+              <img
+                src="/logo.svg"
                 alt="Socially Elisa"
-                width={434}
-                height={301}
-                priority
-                className="h-auto w-[70vw] max-w-[480px] md:w-[26rem] lg:w-[34rem] xl:w-[40rem]"
+                className="mx-auto block h-auto w-[82vw] max-w-[560px] md:w-[30rem] lg:w-[40rem] xl:w-[46rem]"
               />
-              <div className="mt-12 grid items-end gap-8 md:grid-cols-2">
+              <div className="mt-12 grid items-end gap-8 md:grid-cols-2 md:pl-48 lg:pl-72 xl:pl-96">
                 <p className="max-w-xl text-lg text-cream/85">
                   A social-first studio that goes beyond the obvious. We build
                   brands that feel like a flower — imposing, delicate, and
@@ -99,12 +95,21 @@ export default function Home() {
               {services.map((s, i) => (
                 <article
                   key={s.title}
-                  className={`rounded-3xl p-8 ${
+                  className={`relative rounded-3xl p-8 ${
                     i === 1
                       ? "bg-wine text-chartreuse"
                       : "bg-chartreuse text-wine"
                   }`}
                 >
+                  {i === 2 && (
+                    /* static mushroom perched on the top-right corner of the Websites card */
+                    <img
+                      src="/mushroom-maroon.svg"
+                      alt=""
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-4 -top-[52px] z-10 h-24 w-auto select-none md:-top-[120px] md:h-[136px]"
+                    />
+                  )}
                   <div className="flex items-center justify-between">
                     <p className="eyebrow">0{i + 1}</p>
                     <Flower
@@ -135,20 +140,16 @@ export default function Home() {
 
         {/* CTA */}
         <section className="relative overflow-hidden bg-wine py-32 text-cream">
-          <Image
-            src="/mascot.png"
+          <img
+            src="/mascot.svg"
             alt=""
             aria-hidden
-            width={1000}
-            height={1498}
             className="pointer-events-none absolute left-4 bottom-0 z-0 hidden h-auto w-24 select-none md:left-12 md:block md:w-32 lg:left-20 lg:w-40"
           />
-          <Image
-            src="/mascot.png"
+          <img
+            src="/mascot.svg"
             alt=""
             aria-hidden
-            width={1000}
-            height={1498}
             className="pointer-events-none absolute right-4 bottom-0 z-0 hidden h-auto w-24 -scale-x-100 select-none md:right-12 md:block md:w-32 lg:right-20 lg:w-40"
           />
           <div className="container-page relative z-10 text-center">
