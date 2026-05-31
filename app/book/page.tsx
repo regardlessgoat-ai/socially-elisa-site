@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 export default function BookPage() {
   const calendlyUrl =
     process.env.NEXT_PUBLIC_CALENDLY_URL ||
-    "https://calendly.com/your-handle/30min";
+    "https://calendly.com/sociallyelisa-info";
 
   return (
     <>

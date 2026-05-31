@@ -167,7 +167,7 @@ export default function V2Contact() {
                   <li>
                     <span className="v2-eyebrow" style={{ opacity: 0.7 }}>Calendly</span>
                     <br />
-                    <a href="#" className="v2-link">calendly.com/sociallyelisa</a>
+                    <a href="https://calendly.com/sociallyelisa-info" className="v2-link">calendly.com/sociallyelisa-info</a>
                   </li>
                   <li>
                     <span className="v2-eyebrow" style={{ opacity: 0.7 }}>Instagram</span>
