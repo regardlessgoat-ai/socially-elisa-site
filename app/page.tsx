@@ -118,8 +118,7 @@ export default function Home() {
                       className="pointer-events-none absolute bottom-5 right-5 z-10 h-20 w-auto select-none md:bottom-auto md:-right-4 md:-top-[120px] md:h-[136px]"
                     />
                   )}
-                  <div className="flex items-center justify-between">
-                    <p className="eyebrow">0{i + 1}</p>
+                  <div className="flex items-center justify-end">
                     <Flower
                       className="h-12 w-12"
                       petal={i === 1 ? "#CAD183" : "#66033C"}
