@@ -39,7 +39,7 @@ export default function Home() {
             />
             <Flower
               aria-hidden
-              className="pointer-events-none absolute bottom-4 left-4 z-0 hidden h-28 w-28 opacity-95 md:-bottom-6 md:left-8 md:block md:h-36 md:w-36 lg:-bottom-14 lg:left-12 lg:h-44 lg:w-44"
+              className="pointer-events-none absolute bottom-4 left-4 z-0 hidden h-28 w-28 opacity-95 md:bottom-6 md:left-2 md:block md:h-36 md:w-36 lg:bottom-8 lg:left-2 lg:h-44 lg:w-44"
               petal="#66033C"
               center="#CAD183"
               stroke="#CAD183"
