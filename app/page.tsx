@@ -85,7 +85,7 @@ export default function Home() {
         />
 
         {/* SERVICES */}
-        <section id="services" className="bg-cream py-28">
+        <section id="services" className="overflow-x-clip bg-cream py-28">
           <div className="container-page">
             <div className="flex flex-wrap items-end justify-between gap-6">
               <div>
