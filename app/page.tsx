@@ -108,12 +108,14 @@ export default function Home() {
                   }`}
                 >
                   {i === 2 && (
-                    /* static mushroom perched on the top-right corner of the Websites card */
+                    /* Mushroom: contained inside the card on mobile (lower-right,
+                       in the empty space beside the short list items); perched on
+                       the top-right corner on desktop (md+). */
                     <img
                       src="/mushroom-maroon.svg"
                       alt=""
                       aria-hidden="true"
-                      className="pointer-events-none absolute -right-4 -top-[52px] z-10 h-24 w-auto select-none md:-top-[120px] md:h-[136px]"
+                      className="pointer-events-none absolute bottom-5 right-5 z-10 h-20 w-auto select-none md:bottom-auto md:-right-4 md:-top-[120px] md:h-[136px]"
                     />
                   )}
                   <div className="flex items-center justify-between">
@@ -170,6 +172,14 @@ export default function Home() {
                 Book a call →
               </Link>
             </div>
+            {/* Mobile-only daisy-cup mascot below the button (desktop has the
+                flanking pair, which stay hidden on mobile). */}
+            <img
+              src="/mascot.svg"
+              alt=""
+              aria-hidden
+              className="pointer-events-none mx-auto mt-12 block h-auto w-28 select-none md:hidden"
+            />
           </div>
         </section>
       </main>
