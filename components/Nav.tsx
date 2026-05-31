@@ -6,12 +6,10 @@ export default function Nav() {
       <div className="container-page flex items-center justify-between py-4 md:py-5">
         <Link
           href="/"
-          aria-label="Socially Elisa — home"
-          className="display leading-[0.78] text-chartreuse text-xl md:text-2xl"
+          aria-label="Home"
+          className="display text-chartreuse text-xl md:text-2xl"
         >
-          socially
-          <br />
-          elisa
+          home
         </Link>
         <Link
           href="/book"
