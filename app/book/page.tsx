@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import Flower from "@/components/Flower";
 
 export default function BookPage() {
   const calendlyUrl =
@@ -42,8 +41,14 @@ export default function BookPage() {
                 </li>
               </ul>
             </div>
-            <div className="relative aspect-square">
-              <Flower className="absolute inset-0" />
+            <div className="relative flex aspect-square items-center justify-center">
+              {/* decorative bouquet — ~78% of the old daisy's square footprint, centered */}
+              <img
+                src="/flower-bouquet.svg"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none h-auto w-[60%]"
+              />
             </div>
           </div>
         </section>
