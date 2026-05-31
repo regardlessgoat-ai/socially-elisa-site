@@ -50,7 +50,7 @@ export default function Home() {
                 alt="Socially Elisa"
                 className="mx-auto block h-auto w-[82vw] max-w-[560px] md:w-[30rem] lg:w-[40rem] xl:w-[46rem]"
               />
-              <div className="mt-12 grid items-end gap-8 md:grid-cols-2 md:pl-48 lg:pl-72 xl:pl-96">
+              <div className="mt-12 grid items-end gap-8 md:grid-cols-[1fr_auto] md:pl-48 lg:pl-72 xl:pl-96">
                 <p className="max-w-2xl text-lg text-cream/85">
                   Socially Elisa is an agency that goes beyond the obvious, like
                   a flower, imposing yet delicate. Its focus is not only on
