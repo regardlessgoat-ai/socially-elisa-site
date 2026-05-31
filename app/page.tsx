@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Flower from "@/components/Flower";
 import Marquee from "@/components/Marquee";
+import Reveal from "@/components/Reveal";
 
 const services = [
   {
@@ -38,7 +39,7 @@ export default function Home() {
             />
             <Flower
               aria-hidden
-              className="pointer-events-none absolute bottom-4 left-4 z-0 hidden h-28 w-28 opacity-95 md:bottom-6 md:left-8 md:block md:h-36 md:w-36 lg:bottom-8 lg:left-12 lg:h-44 lg:w-44"
+              className="pointer-events-none absolute bottom-4 left-4 z-0 hidden h-28 w-28 opacity-95 md:-bottom-6 md:left-8 md:block md:h-36 md:w-36 lg:-bottom-14 lg:left-12 lg:h-44 lg:w-44"
               petal="#66033C"
               center="#CAD183"
               stroke="#CAD183"
@@ -50,7 +51,7 @@ export default function Home() {
                 alt="Socially Elisa"
                 className="mx-auto block h-auto w-[82vw] max-w-[560px] md:w-[30rem] lg:w-[40rem] xl:w-[46rem]"
               />
-              <div className="mt-12 grid items-end gap-8 md:grid-cols-[1fr_auto] md:pl-48 lg:pl-72 xl:pl-96">
+              <div className="mt-12 grid items-end gap-8 md:grid-cols-[1fr_auto] md:pl-24 lg:pl-36 xl:pl-48">
                 <p className="max-w-2xl text-lg text-cream/85">
                   Socially Elisa is an agency that goes beyond the obvious, like
                   a flower, imposing yet delicate. Its focus is not only on
@@ -96,7 +97,7 @@ export default function Home() {
                 </h2>
               </div>
             </div>
-            <div className="mt-16 grid gap-6 md:grid-cols-3">
+            <Reveal className="reveal-cards mt-16 grid gap-6 md:grid-cols-3">
               {services.map((s, i) => (
                 <article
                   key={s.title}
@@ -139,7 +140,7 @@ export default function Home() {
                   </ul>
                 </article>
               ))}
-            </div>
+            </Reveal>
           </div>
         </section>
 
