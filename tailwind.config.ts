@@ -11,8 +11,12 @@ const config: Config = {
         espresso: "#311507",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
-        sans: ["var(--font-body)", "ui-sans-serif", "system-ui"],
+        // Brand book p.7: Tropiland for titles/special words, Coolvetica for
+        // text + bold titles. The old Google fonts stay in the stack ON PURPOSE:
+        // they are the live fallback until the font files arrive in public/fonts,
+        // and a safety net if a glyph is ever missing after that.
+        display: ["Tropiland", "var(--font-display)", "Georgia", "serif"],
+        sans: ["Coolvetica", "var(--font-body)", "ui-sans-serif", "system-ui"],
       },
       animation: {
         "marquee": "marquee 30s linear infinite",

@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BRAND FONTS (2026-08-30, from Elisa's brand book, sociallyelisa_id.pdf p.7):
+   Coolvetica  — body text (light) and bold titles
+   Tropiland   — display titles and special words
+
+   Neither is on Google Fonts, so they load from /public/fonts as self-hosted files.
+   Until those files exist these @font-face declarations 404 once and every stack
+   falls through to the current fonts (DM Sans / Bagel Fat One) — the site looks
+   exactly as it does today, then switches by itself on the deploy after
+   Coolvetica.woff2 / Coolvetica-Bold.woff2 / Tropiland.woff2 land in public/fonts/.
+   Colour scheme deliberately untouched — the brief was font only. */
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/Coolvetica.woff2') format('woff2');
+  font-weight: 300 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/Coolvetica-Bold.woff2') format('woff2');
+  font-weight: 600 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tropiland';
+  src: url('/fonts/Tropiland.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --color-cream: #e1ded9;
   --color-chartreuse: #cad183;
