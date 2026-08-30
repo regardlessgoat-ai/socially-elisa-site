@@ -16,7 +16,7 @@ const config: Config = {
         // they are the live fallback until the font files arrive in public/fonts,
         // and a safety net if a glyph is ever missing after that.
         display: ["Tropiland", "var(--font-display)", "Georgia", "serif"],
-        sans: ["Coolvetica", "var(--font-body)", "ui-sans-serif", "system-ui"],
+        sans: ["Coolvetica", "var(--font-body-standin)", "var(--font-body)", "ui-sans-serif", "system-ui"],
       },
       animation: {
         "marquee": "marquee 30s linear infinite",
