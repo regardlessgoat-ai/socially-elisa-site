@@ -19,9 +19,17 @@ export default function Footer() {
               Marketing · Branding · Social Media. Imposing yet delicate.
             </p>
           </div>
+          {/* 2026-08-30: info@ was ONLY ever printed on the /v2 pages, which are being
+              removed. Without this line the site would have had no way to reach Elisa
+              except booking a call — fine for a hot lead, useless for anyone with a
+              question. Confirmed with her that info@ is the mailbox she reads; the
+              hello@ address the old pages advertised was not. */}
           <FooterCol
             title="Get in"
-            links={[["Book a call", "/book"]]}
+            links={[
+              ["Book a call", "/book"],
+              ["info@sociallyelisa.com", "mailto:info@sociallyelisa.com"],
+            ]}
           />
           <FooterCol
             title="Follow"
